@@ -40,11 +40,11 @@
                 position: relative;
             }
         </style>
-        <!--<script type="text/javascript" src="app.js""></script>-->
+       <script type="text/javascript" src="app.js""></script>
     </head>
 
     <body>
-<!--
+
         <div id="result"></div>
 
         <div>
@@ -73,38 +73,14 @@
                     <div id="udvozlet">       
                         <p align=center><h2>Üdvözöllek!</h2>Kérlek adj meg egy játékos nevet, hogy emlékezhessek rád! :)</p>
                         <input type=text id=user_id>
-                        <button id="mehet">Elküld</button>
+                        <button id="indit">Elküld</button>
                     </div>
 
                 </div>
             </section>
-        </div>-->
-        <input type=text id=user_id />
-        <button id="mehet">Elküld</button>
+        </div>
+        
     </body>
 
 
 </html>
-    <script>
-        document.getElementById("mehet").addEventListener("click", login);
-        var ws;
-        var app_id = "kimwacg_kefo";
-        var user_id;
-        function login() {
-            user_id = document.getElementByID("user_id").value;
-            ws = new WebSocket("ws://5.249.155.46:8084/FirefoxOSParty/WsChatServlet");
-            ws.onopen = function () {
-                var string = '{"u":"' + user_id + '","n":"' + user_id + '","g":"' + app_id + '"}';
-                ws.send(string);
-            };
-            ws.onmessage = function (message) {
-                console.log(message.data);
-                json = JSON.parse(message.data);
-                if (json["c"] != null) {
-                }
-
-            }
-
-        }
-
-    </script>

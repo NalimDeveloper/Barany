@@ -40,6 +40,34 @@ window.addEventListener("load", function () {
         console.log("Klikk");
     });
 
+//websocket
+document.getElementById("indit").addEventListener("click", login);
+
+        var ws;
+        var app_id = "kimwacg_kefo";
+        var user_id;
+        function login() {
+            user_id = document.getElementById("user_id").value;
+            ws = new WebSocket("ws://5.249.155.46:8084/FirefoxOSParty/WsChatServlet");
+            ws.onopen = function () {
+                var string = '{"u":"' + user_id + '","n":"' + user_id + '","g":"' + app_id + '"}';
+                ws.send(string);
+                console.log("Klickk");
+            };
+            ws.onmessage = function (message) {
+                console.log(message.data);
+                json = JSON.parse(message.data);
+                if (json["c"] != null) {
+                }
+
+            }
+
+        }
+
+
+
 });
 
-//websocket
+
+
+
