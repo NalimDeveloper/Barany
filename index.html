@@ -17,11 +17,11 @@
                 padding: 0;
                 font-size: 10px;
                 font-family: sans-serif;
-                background-color: #fff;
+                background-color: #CC6600;
             }
 
             body {
-                background: none;
+                background: #CC6600;
             }
 
             h2.bb-docs {
@@ -39,6 +39,39 @@
                 margin-bottom: 1.5rem;
                 position: relative;
             }
+            
+            div#udvozlet {
+                background:#CC6600;
+                padding:4px;
+                margin:'10px';
+                text-align:center;
+                margin:20px 0 0 0;
+                color:#FFFBD0;
+                
+            }
+            
+            button#indit {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+   padding:10px;
+   background:#C13100;
+                border:none;
+                color:#FFFBD0;
+                font-size:22px;
+            
+            }
+
+            input#user_id{
+                
+                background:#CC6600;
+                border:none;
+                border-bottom: solid 1px #FFFBD0;
+                color:#FFFBD0;
+                text-size:16px;
+            }
+
+
         </style>
        <script type="text/javascript" src="app.js""></script>
     </head>
@@ -57,7 +90,7 @@
                 </header>
                 <nav>
                     <ul>
-                        <li id="newgame"><a href="#content" id="newgame">Új játék</a></li>
+                        <!--<li id="newgame"><a href="#content" id="newgame">Új játék</a></li>-->
                         <li><a href="kapcsolat.html">Kapcsolat</a></li>
                         <li><a href="#content">Kilépés</a></li>
                     </ul>
@@ -71,9 +104,11 @@
                 </header>
                 <div role="main">
                     <div id="udvozlet">       
-                        <p align=center><h2>Üdvözöllek!</h2>Kérlek adj meg egy játékos nevet, hogy emlékezhessek rád! :)</p>
-                        <input type=text id=user_id>
-                        <button id="indit">Elküld</button>
+                         <p align=center><h2>Üdvözöllek!</h2>Játék kezdéshez adj meg egy nevet!</p>
+                                      
+                                      <input type=text id=user_id><br /><br /><br />
+                                      <button id="indit">Elküld</button>
+                                      
                     </div>
 
                 </div>
